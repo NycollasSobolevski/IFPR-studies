@@ -1,0 +1,97 @@
+Seção 1: Informações do Estabelecimento
+Qual o tipo do seu estabelecimento?
+
+a) Estacionamento privado
+b) Instituição de ensino pública
+c) Instituição de ensino privada
+d) Outro (especifique)
+
+
+Quantos veículos, em média, entram e saem diariamente no seu estabelecimento?
+
+a) Menos de 50
+b) Entre 50 e 100
+c) Entre 100 e 200
+d) Mais de 200	
+
+
+Atualmente, como é feito o controle de entrada e saída de veículos?
+
+a) Manual (papel ou planilhas)
+b) Sistema eletrônico
+c) Não há controle
+d) Outro (especifique)
+
+
+Seção 2: Necessidades e Preferências
+
+
+Quais são os principais desafios que você enfrenta no controle de entrada e saída de veículos?
+(resposta aberta)
+
+O seu estabelecimento tem interesse em implementar um sistema automatizado de controle de entrada e saída de veículos?
+
+a) Sim
+b) Não
+c) Talvez
+
+
+Qual seria a principal funcionalidade que você espera de um sistema de controle de veículos?
+
+a) Registro automático de entrada/saída
+b) Cadastro de usuários e veículos
+c) Relatórios detalhados de tráfego
+d) Integração com outras plataformas (ex. segurança, pagamento)
+e) Outro (especifique)
+
+
+Seção 3: Experiência do Usuário
+
+
+Qual o nível de familiaridade do seu time com o uso de tecnologias digitais (ex: aplicativos, sistemas de gestão)?
+
+a) Alto
+b) Médio
+c) Baixo
+d) Nenhum
+
+
+Quanto tempo a sua equipe estaria disposta a dedicar ao treinamento para um novo sistema de controle de veículos?
+
+a) Menos de 1 dia
+b) 1 a 3 dias
+c) 1 semana
+d) Mais de 1 semana
+
+
+Seção 4: Investimento e Decisão de Compra
+
+
+Quanto você estaria disposto a investir em um sistema de controle de veículos para o seu estabelecimento?
+
+a) Menos de R$ 5.000
+b) Entre R$ 5.000 e R$ 10.000
+c) Mais de R$ 10.000
+d) Ainda não sei
+
+
+O que influenciaria mais sua decisão de adquirir um sistema de controle de veículos?
+
+a) Preço
+b) Funcionalidades
+c) Facilidade de uso
+d) Suporte técnico
+e) Outro (especifique)
+
+
+Seção 5: Considerações Finais
+
+
+Você estaria disposto a participar de uma demonstração do software?
+
+a) Sim
+b) Não
+c) Talvez
+Gostaria de adicionar algum comentário ou sugestão sobre a implementação de um sistema de controle de veículos no seu estabelecimento?
+(resposta aberta)
+
