@@ -15,6 +15,10 @@ class CheckLoginMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
+        if(!PageCheck::CheckLogin()){
+            return redirect('/login');
+        }
+
         return $next($request);
     }
 }

@@ -1,4 +1,7 @@
 <?php
+
+namespace App\Helpers;
+
 class PageCheck
 {
     public static function CheckLogin () {
