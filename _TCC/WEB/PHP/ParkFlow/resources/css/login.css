@@ -17,3 +17,7 @@
         font-size: x-large;
     }
 }
+hr{
+    width: 100%;
+    height: 2px;
+}
