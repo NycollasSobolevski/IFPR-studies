@@ -7,7 +7,7 @@
 
     @vite([
         'resources/css/login.css',
-        'resources/css/app.css', 
+        'resources/css/app.css',
         'resources/js/app.js'
     ])
 
@@ -22,11 +22,23 @@
     <main>
         <div class="login-container">
             <h1>LOGIN</h1>
-            <form action="" method="post">
+            <form action="/login" method="post">
                 <div class="input-container">
                     <input type="text" id="identification" required>
                     <label for="identification">Email / Document</label>
                 </div>
+                @if($data->email  != null && $data->userExists == true)
+                    <div class="input-container">
+                        <input type="password" name="passwordInput" id="pass-input" required>
+                        <label for="identification">Password</label>
+                    </div>
+                    @if($data->firstLogin == true)
+                        <div class="input-container">
+                            <input type="password" name="rePasswordInput" id="repass-input" required>
+                            <label for="identification">Password</label>
+                        </div>
+                    @endif
+                @endif
                 <button type="submit" class="primary">LOGIN</button>
             </form>
             <span class="divider"></span>
