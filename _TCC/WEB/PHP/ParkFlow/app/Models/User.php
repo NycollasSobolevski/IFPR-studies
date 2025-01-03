@@ -2,47 +2,52 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+class User extends Model
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
+    use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
-     */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+    protected $table = 'user';
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var list<string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    protected $fillable = ['name', 'document', 'email', 'hash', 'phone', 'id_address', 'id_role', 'id_image', 'id_company', 'is_active'];
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    protected function casts(): array
+    public $timestamps = true;
+
+    // Relação com Role
+    public function role()
     {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
+        return $this->belongsTo(Role::class, 'id_role');
+    }
+
+    // Relação com Address
+    public function address()
+    {
+        return $this->belongsTo(Address::class, 'id_address');
+    }
+
+    // Relação com Image
+    public function image()
+    {
+        return $this->belongsTo(Image::class, 'id_image');
+    }
+
+    // Relação com Company
+    public function company()
+    {
+        return $this->belongsTo(Company::class, 'id_company');
+    }
+
+    // Relação com GoogleAuthentication
+    public function googleAuthentication()
+    {
+        return $this->hasOne(GoogleAuthentication::class, 'id_user');
+    }
+
+    // Relação com Vehicle
+    public function vehicles()
+    {
+        return $this->hasMany(Vehicle::class, 'id_user');
     }
 }

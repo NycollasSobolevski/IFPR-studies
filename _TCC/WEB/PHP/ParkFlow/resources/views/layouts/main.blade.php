@@ -7,6 +7,7 @@
         <title>@yield('title')</title>
 
         <link rel="stylesheet" href="/css/index.css">
+        @yield('header')
 
         <script src="/js/index.js"></script>
 
@@ -27,13 +28,18 @@
                 <img src="/img/logo.png" alt="logo.png" width="30">
                 <img src="/img/extended_logo.svg" alt="extendedLogo" width="100">
             </a>
+            <a href="/login">
+                <h1>
+                    LogOut
+                </h1>
+            </a>
         </header>
         <nav>
             <section>
                 <a href="/login"><span class="material-symbols-outlined">apartment</span><p>Companies</p></a>
-                <a href="/login"><span class="material-symbols-outlined">group</span><p>Users</p></a>
+                <a href="/users"><span class="material-symbols-outlined">group</span><p>Users</p></a>
+                <a href="/userDetails"><span class="material-symbols-outlined">monitoring</span><p>User Details</p></a>
                 <a href="/login"><span class="material-symbols-outlined">paid</span><p>Plans</p></a>
-                <a href="/login"><span class="material-symbols-outlined">apartment</span><p>Companies</p></a>
             </section>
 
             <section>

@@ -22,7 +22,7 @@ body {
 header {
     width: 100%;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
     background-color: var(--header-background);
     padding: 1rem ;
@@ -32,6 +32,11 @@ header {
     .logo-container{
         display: flex;
         gap: 1rem;
+    }
+
+    h1{
+        font-size: 1.2rem;
+        font-weight: 700;
     }
 }
 
@@ -51,6 +56,19 @@ button{
 
     &.primary {
         background-color: var(--btn-primary-bg);
+        *{
+            color: aliceblue;
+        }
+    }
+    &.secondary {
+        background-color: var(--btn-secondary-bg);
+        color: #999;
+
+        &.danger{
+            *{
+                color: #ff0000;
+            }
+        }
     }
 }
 .divider {
@@ -110,6 +128,13 @@ nav {
     }
 
 }
+
+h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: aliceblue;
+}
+
 main{
     margin: 5rem 0 0 5rem;
 }
@@ -160,6 +185,15 @@ footer {
         top: -20px;
         font-size: 12px;
         left: .5rem ;
-      }
+    }
 
+    select{
+        width: 100%;
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding-left: .5rem ;
+        height: 2rem;
+    }
 }

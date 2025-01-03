@@ -17,6 +17,14 @@
         font-size: x-large;
     }
 }
+.error-container {
+    width: 100%;
+    text-align: center;
+
+    p{
+        color: red;
+    }
+}
 hr{
     width: 100%;
     height: 2px;

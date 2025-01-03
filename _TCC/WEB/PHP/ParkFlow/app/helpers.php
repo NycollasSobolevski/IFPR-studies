@@ -8,6 +8,7 @@ if(!function_exists('checkLoginOrRedirect')) {
         if(!PageCheck::CheckLogin()) {
             return redirect('login')->send();
         }
+        else return redirect('/')->send();
     }
 }
 

@@ -1,3 +1,8 @@
+@php
+use App\Http\Controllers\RouteParams\Login\LoginState;
+
+@endphp
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,22 +28,24 @@
         <div class="login-container">
             <h1>LOGIN</h1>
             <form action="/login" method="post">
+                @csrf
+                @if($error)
+                    <div class="error-container">
+                        <p>
+                            @php
+                            echo $error;
+                            @endphp
+                        </p>
+                    </div>
+                    @endif
                 <div class="input-container">
-                    <input type="text" id="identification" required>
+                    <input type="text" id="identification" name="identification" required>
                     <label for="identification">Email / Document</label>
                 </div>
-                @if($data->email  != null && $data->userExists == true)
-                    <div class="input-container">
-                        <input type="password" name="passwordInput" id="pass-input" required>
-                        <label for="identification">Password</label>
-                    </div>
-                    @if($data->firstLogin == true)
-                        <div class="input-container">
-                            <input type="password" name="rePasswordInput" id="repass-input" required>
-                            <label for="identification">Password</label>
-                        </div>
-                    @endif
-                @endif
+                <div class="input-container">
+                    <input type="password" id="pass-input" name="password" required>
+                    <label for="identification">Password</label>
+                </div>
                 <button type="submit" class="primary">LOGIN</button>
             </form>
             <span class="divider"></span>
