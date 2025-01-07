@@ -64,6 +64,15 @@ public class MainActivity extends AppCompatActivity {
                     ")"
             );
 
+            db.execSQL("CREATE TABLE IF NOT EXISTS [logged](" +
+                    "[id] INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    "[id_user] INTEGER," +
+                    "FOREIGN KEY ([id_user]) REFERENCES [user]([id])" +
+                    ")"
+            );
+
+            db.execSQL("DELETE from [logged]");
+
             db.close();
         } catch (Exception e) {
             e.printStackTrace();

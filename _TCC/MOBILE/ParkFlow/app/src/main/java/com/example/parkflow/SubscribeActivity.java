@@ -19,7 +19,7 @@ public class SubscribeActivity extends AppCompatActivity {
 
     private SQLiteDatabase db;
     private EditText nameEt, emailEt, phoneEt, docEt, passEt;
-    private Button submitBtn;
+    private Button submitBtn, returnbtn;
     private TextView errorTv;
 
     @Override
@@ -35,6 +35,14 @@ public class SubscribeActivity extends AppCompatActivity {
         passEt = findViewById(R.id.passEt);
         submitBtn = findViewById(R.id.subscribeSubmitbtn);
         errorTv = findViewById(R.id.subscribeErrorTx);
+        returnbtn = findViewById(R.id.subscribeReturnBtn);
+
+        returnbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Return();
+            }
+        });
 
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,6 +79,11 @@ public class SubscribeActivity extends AppCompatActivity {
         finish();
     }
 
+    private void Return(){
+        Intent intent = new Intent( SubscribeActivity.this, LoginActivity.class );
+        startActivity(intent);
+        finish();
+    }
 
     public void createDb(){
         db = openOrCreateDatabase("Parkflow", MODE_PRIVATE, null);

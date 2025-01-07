@@ -45,6 +45,14 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+
+
+        //! area de teste
+        identification.setText("1");
+        password.setText("1");
+        login();
+        // fim da area de teste
+
     }
 
 
@@ -64,9 +72,15 @@ public class LoginActivity extends AppCompatActivity {
         Cursor cursor = db.rawQuery(qrr, new String[]{identString, pass});
 
         boolean isValid = cursor.getCount() > 0;
-        cursor.close();
 
         if(isValid) {
+            cursor.moveToFirst();
+            int id = cursor.getInt(cursor.getColumnIndexOrThrow("id"));
+
+            Log.d("User ID", String.valueOf(id));
+            qrr = "INSERT INTO [logged] (id_user) VALUES (?)";
+            db.execSQL(qrr, new String[]{String.valueOf(id)});
+
             db.close();
             cursor.close();
             Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
@@ -83,7 +97,7 @@ public class LoginActivity extends AppCompatActivity {
 
         errorTv.setText("Usuário ou senha inválidos");
         db.close();
-
+        cursor.close();
     }
     protected void subscribe(){
         Intent intent = new Intent(LoginActivity.this, SubscribeActivity.class);

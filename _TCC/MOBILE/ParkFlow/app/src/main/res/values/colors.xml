@@ -16,4 +16,9 @@
     <color name="text_warning_color">#D2C243</color>
     <color name="text_error_color">#FF4B4B</color>
     <color name="text_hint_color">#7E7E7E</color>
+
+    <color name="bottom_nav_icon_color">#7E7E7E</color>
+    <color name="bottom_nav_text_color">#FFFFFFFF</color>
+
+
 </resources>

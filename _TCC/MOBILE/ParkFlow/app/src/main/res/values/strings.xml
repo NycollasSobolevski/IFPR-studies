@@ -9,4 +9,7 @@
     <string name="subscribe_document_label">Document</string>
     <string name="subscribe_phone_label">Phone</string>
 
+
+    <string name="nav_profile_label">Profile</string>
+    <string name="nav_vehicles_label">Vehicles</string>
 </resources>

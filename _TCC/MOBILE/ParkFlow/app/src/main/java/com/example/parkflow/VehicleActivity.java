@@ -7,14 +7,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class HomeActivity extends AppCompatActivity {
+public class VehicleActivity extends AppCompatActivity {
 
     BottomNavigationView nav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.vehicle_activity);
 
         nav = findViewById(R.id.bottom_navigation);
 
@@ -22,16 +22,14 @@ public class HomeActivity extends AppCompatActivity {
             Intent profileIntent = new Intent(this, HomeActivity.class);
 
             if(item.getItemId() == R.id.menu_home){
-                return true;
+                return false;
             } else if (item.getItemId() == R.id.menu_vehicle) {
-                profileIntent = new Intent(this,  VehicleActivity.class);
-                startActivity(profileIntent);
                 return true;
             } else {
                 return false;
             }
         });
-        nav.setSelectedItemId(R.id.menu_home);
+        nav.setSelectedItemId(R.id.menu_vehicle);
 
     }
 }

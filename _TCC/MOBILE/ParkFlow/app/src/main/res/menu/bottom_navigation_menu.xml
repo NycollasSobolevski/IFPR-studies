@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/user_icon"
+        android:title="@string/nav_profile_label" />
+    <item
+        android:id="@+id/menu_vehicle"
+        android:icon="@drawable/car_icon"
+        android:title="@string/nav_vehicles_label" />
+</menu>
