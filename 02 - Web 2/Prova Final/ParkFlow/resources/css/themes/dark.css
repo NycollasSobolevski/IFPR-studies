@@ -1,0 +1,12 @@
+:root{
+    --page-background: #1b212e ;
+
+    --header-background: #0a0f1b;
+    --btn-default-bg: #1b212e;
+
+    --btn-hover-bg: #263653;
+    --btn-primary-bg: #39548f;
+    --btn-secondary-bg: transparent;
+
+    --default-color: #8a8a8a;
+}

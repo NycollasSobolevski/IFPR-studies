@@ -1,3 +1,5 @@
+-- CRIANDO O BANCO SQL SERVER
+
 IF EXISTS (SELECT name FROM master.sys.databases WHERE name = N'ParkFlow')
     DROP DATABASE [ParkFlow];
 

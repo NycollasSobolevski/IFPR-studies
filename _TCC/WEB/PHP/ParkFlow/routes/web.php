@@ -17,6 +17,8 @@ Route::post('/login', [LoginController::class, 'login']);
 
 Route::get('/users', [UserController::class, 'GetUsersPage']);
 Route::get('/updateUser/{id}', [UserController::class, 'getUpdateUserContainer']);
+Route::get('/createUser', [UserController::class, 'getCreateUserContainer']);
+Route::post('/createUser', [UserController::class, 'createUser']);
 Route::post('/updateUser/{id}', [UserController::class, 'updateUser']);
 Route::get('/deleteUser/{id}', [UserController::class, 'deleteUser']);
 

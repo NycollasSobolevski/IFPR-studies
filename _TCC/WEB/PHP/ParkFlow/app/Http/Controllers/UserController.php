@@ -22,6 +22,12 @@ class UserController extends Controller
     public function getUserDetails() {
         return UserService::getUserDetails();
     }
+    public function getCreateUserContainer() {
+        return UserService::getCreateUserContainer();
+    }
+    public function createUser(Request $req) {
+        return UserService::create($req);
+    }
 }
 
 ?>

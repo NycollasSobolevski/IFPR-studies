@@ -12,10 +12,12 @@
         <div class="table-header">
             <h1>Usuários</h1>
 
-            <button class="primary">
-                <span class="material-symbols-outlined">add</span>
-                <p>Novo</p>
-            </button>
+            <form action="/createUser" method="get">
+                <button class="primary">
+                    <span class="material-symbols-outlined">add</span>
+                    <p>Novo</p>
+                </button>
+            </form>
         </div>
 
         <table>
@@ -78,6 +80,53 @@
                             @if ($editedUser->company_id == $company->id)
                                 selected
                             @endif
+                        >
+                            {{$company->name}}
+                        </option>
+                        @endforeach
+                    </select>
+                </div>
+                <button type="submit" class="primary">
+                    SALVAR
+                </button>
+            </form>
+            <form action="/users" method="get">
+                <button type="submit">CANCELAR</button>
+            </form>
+        </div>
+    @endif
+
+    @if($newUser)
+    <div class="edit-user-container">
+            <h1>Adicionar Usuário</h1>
+            <form action="/createUser" method="POST">
+                @csrf
+                <div class="input-container">
+                    <input type="text" name="username" required>
+                    <label for="username">Name</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" name="document" required>
+                    <label for="document">Document</label>
+                </div>
+                <div class="input-container">
+                    <input type="password" name="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <div class="input-container">
+                    <input type="email" name="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" name="phone" required>
+                    <label for="phone">Phone</label>
+                </div>
+                <div class="input-container">
+                    <select name="company">
+                        <option value="" disabled selected>Escolha uma empresa</option>
+                        @foreach ($companies as $company)
+                        <option
+                            value="{{ $company->id }}"
                         >
                             {{$company->name}}
                         </option>

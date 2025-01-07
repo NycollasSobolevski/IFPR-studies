@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Parkflow</string>
+    <string name="login_identification_input_label">Email / Documento</string>
+    <string name="login_password_input_label" >Password</string>
+
+    <string name="subscribe_name_label">Name</string>
+    <string name="subscribe_email_label">Email</string>
+    <string name="subscribe_password_label">Password</string>
+    <string name="subscribe_document_label">Document</string>
+    <string name="subscribe_phone_label">Phone</string>
+
+</resources>

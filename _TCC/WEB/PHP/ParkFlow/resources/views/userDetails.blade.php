@@ -9,6 +9,7 @@
 @section('content')
 
 <div class="chart-container">
+    <h1>Usuários por cidade</h1>
     <canvas id="myChart"></canvas>
 </div>
 

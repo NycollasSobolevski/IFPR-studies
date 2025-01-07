@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="default_bg">#1b212e</color>
+    <color name="header_bg">#0a0f1b</color>
+
+    <color name="btn_hover_bg">#263653</color>
+    <color name="btn_primary_bg">#39548F</color>
+    <color name="btn_secondary_bg">#999999</color>
+
+    <color name="default_color">#8a8a8a</color>
+
+    <color name="text_success_color">#5BE36F</color>
+    <color name="text_warning_color">#D2C243</color>
+    <color name="text_error_color">#FF4B4B</color>
+    <color name="text_hint_color">#7E7E7E</color>
+</resources>

@@ -15,7 +15,8 @@ final class UserService {
 
         return view('viewUsers', [
             'users' => $allUsers,
-            'editedUser' => null
+            'editedUser' => null,
+            'newUser' => null,
         ]);
     }
     static function deleteUser(int $id) {
@@ -24,6 +25,7 @@ final class UserService {
 
         return self::GetUsers();
     }
+
     static function getUpdateUserContainer(int $id){
         $user = User::findOrFail($id);
         $companies = Company::all();
@@ -32,7 +34,8 @@ final class UserService {
                 'address'
             ])->get(),
             'editedUser' => $user,
-            'companies' => $companies
+            'companies' => $companies,
+            'newUser' => null,
         ]);
     }
     static function updateUser(int $id, Request $req) {
@@ -45,10 +48,36 @@ final class UserService {
         $user->save();
         return self::GetUsers();
     }
-
+    static function getCreateUserContainer(){
+        $companies = Company::all();
+        return view('viewUsers', [
+            'users' => User::with([
+                'address'
+            ])->get(),
+            'editedUser' => null,
+            'companies' => $companies,
+            'newUser' => true,
+        ]);
+    }
+    static function create(Request $req) {
+        $user = new User();
+        $user->name = $req->input('username');
+        $user->email = $req->input('email');
+        $user->id_company = $req->input('company');
+        $user->phone = $req->input('phone');
+        $user->hash = $req->input('password');
+        $user->document = $req->input('document');
+        $user->id_address = 1;
+        $user->id_role = 1;
+        $user->id_image = 1;
+        $user->timestamps = false;
+        $user->save();
+        return self::GetUsers();
+    }
     static function getUserDetails(){
 
-        $usersByCity = User::join('address', 'user.id_address', '=', 'address.id')
+        $usersByCity = User::join('company', 'user.id_company', '=', 'company.id')
+        ->join('address', 'company.id_address', '=', 'address.id')
         ->select('address.city', DB::raw('COUNT(*) as user_count'))
         ->groupBy('address.city')
         ->get();

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/errorTb"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:backgroundTint="@color/default_bg"
+    android:backgroundTintMode="src_in">
+
+
+    <EditText
+        android:id="@+id/identificationTb"
+        android:layout_width="300dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="@string/login_identification_input_label"
+        android:textColorHint="@color/text_hint_color"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/default_color"
+        app:layout_constraintBottom_toTopOf="@+id/passwordTb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="343dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/extended_logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="LOGIN"
+        android:textColor="@color/default_color"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/passwordTb"
+        android:layout_width="300dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="@string/login_password_input_label"
+        android:textColorHint="@color/text_hint_color"
+        android:hyphenationFrequency="normal"
+        android:inputType="textPassword"
+        android:textColor="@color/default_color"
+        app:layout_constraintBottom_toTopOf="@+id/loginBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/btn_primary_bg"
+        android:text="LOGIN"
+        app:layout_constraintBottom_toTopOf="@+id/subscribeBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/subscribeBtn"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/default_color"
+        android:text="SUBSCRIBE"
+        android:textColor="@color/header_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/errorTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:textColor="@color/text_error_color"
+        app:layout_constraintBottom_toTopOf="@+id/identificationTb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+Ola professor, como vai? 
+espero que bem
+
+desenvolvi o projeto com a tecnologia Laravel do php e utilizando banco de dados SQL Server, pois meu objetivo é haver a possibilidade de implementar no tcc, tanto que há entidades no banco que nao sao visiveis no programa em si.
+
+Deixei um video do projeto em funcionamento, pois há a chance de precisar configurar o php e suas dependencias com o sql server. 
+
+- Na pasta /ParkFlow está o codigo fonte do software
+- o arquivo de criaçao do banco é 'Database Creation Querry'
+- O arquivo de inserçao de dados é 'Insert Querry'
+- O video mostrando o funcionamento é 'funcionamento'
