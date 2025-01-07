@@ -69,11 +69,11 @@ public class SubscribeActivity extends AppCompatActivity {
             String query = "INSERT INTO [User] (name, email, phone, document, hash) VALUES (?, ?, ?, ?, ?)";
             db.execSQL(query, new Object[]{name, email, phone, doc, pass});
             errorTv.setText("Usuário cadastrado com sucesso!");
+            db.close();
         } catch (Exception e) {
             errorTv.setText("Erro ao cadastrar usuário: " + e.getMessage());
             return;
         }
-        db.close();
         Intent intent = new Intent( SubscribeActivity.this, LoginActivity.class );
         startActivity(intent);
         finish();

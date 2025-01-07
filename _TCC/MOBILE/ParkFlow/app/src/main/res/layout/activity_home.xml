@@ -7,6 +7,86 @@
     android:background="#000000"
     android:backgroundTint="@color/default_bg">
 
+    <EditText
+        android:id="@+id/profilePassEt"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/subscribe_password_label"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColor="@color/default_color"
+        android:textColorHint="@color/text_hint_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileEmailEt" />
+
+    <EditText
+        android:id="@+id/profileNameEt"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/subscribe_name_label"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="@color/default_color"
+        android:textColorHint="@color/text_hint_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <EditText
+        android:id="@+id/profileEmailEt"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/subscribe_email_label"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:textColor="@color/default_color"
+        android:textColorHint="@color/text_hint_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilePhoneEt" />
+
+    <EditText
+        android:id="@+id/profileDocumentEt"
+        android:layout_width="250dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/subscribe_document_label"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="@color/default_color"
+        android:textColorHint="@color/text_hint_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileNameEt" />
+
+    <EditText
+        android:id="@+id/profilePhoneEt"
+        android:layout_width="250dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/subscribe_phone_label"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        android:textColor="@color/default_color"
+        android:textColorHint="@color/text_hint_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileDocumentEt" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
@@ -22,12 +102,34 @@
         app:menu="@menu/bottom_navigation_menu"
     />
 
-    <TextView
-        android:id="@+id/textView2"
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="159dp"
+        android:layout_height="168dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/user_icon" />
+
+    <Button
+        android:id="@+id/profileSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Home"
-        tools:layout_editor_absoluteX="170dp"
-        tools:layout_editor_absoluteY="146dp" />
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/btn_primary_bg"
+        android:text="Save Changes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilePassEt" />
+
+    <Button
+        android:id="@+id/profileDeleteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/text_error_color"
+        android:text="@string/profile_delete_btn_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

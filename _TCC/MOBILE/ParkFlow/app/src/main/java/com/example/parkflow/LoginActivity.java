@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
         //! area de teste
-        identification.setText("1");
+        identification.setText("2");
         password.setText("1");
         login();
         // fim da area de teste
@@ -59,9 +59,6 @@ public class LoginActivity extends AppCompatActivity {
     protected void login(){
         String identString = identification.getText().toString();
         String pass = password.getText().toString();
-
-        // Log.d("IdentString debug", identString);
-        // Log.d("password debug", pass);
 
         if(identString.isEmpty() || pass.isEmpty()){
             errorTv.setText("Usuário ou senha inválidos");

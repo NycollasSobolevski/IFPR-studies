@@ -12,4 +12,5 @@
 
     <string name="nav_profile_label">Profile</string>
     <string name="nav_vehicles_label">Vehicles</string>
+    <string name="profile_delete_btn_label">Delete</string>
 </resources>
