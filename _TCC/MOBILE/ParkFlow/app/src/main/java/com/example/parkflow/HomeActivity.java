@@ -19,7 +19,7 @@ public class HomeActivity extends AppCompatActivity {
     BottomNavigationView nav;
     SQLiteDatabase db;
     private EditText name, doc, email, password, phone;
-    private Button submitBtn, deleteBtn;
+    private Button submitBtn, deleteBtn, logoutBtn;
 
 
     @Override
@@ -28,6 +28,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         createDb();
         nav = findViewById(R.id.bottom_navigation);
+        logoutBtn = findViewById(R.id.profileLogoutBtn);
 
         nav.setOnItemSelectedListener(item -> {
             Intent profileIntent = new Intent(this, HomeActivity.class);
@@ -52,6 +53,12 @@ public class HomeActivity extends AppCompatActivity {
         submitBtn = findViewById(R.id.profileSubmit);
         deleteBtn = findViewById(R.id.profileDeleteBtn);
 
+        logoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                logout();
+            }
+        });
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,7 +93,6 @@ public class HomeActivity extends AppCompatActivity {
         phone.setText(cursor.getString(cursor.getColumnIndexOrThrow(User.COLUMN_PHONE)));
         email.setText(cursor.getString(cursor.getColumnIndexOrThrow(User.COLUMN_EMAIL)));
     }
-
     private void redirectToLogin(){
         Intent intent = new Intent( HomeActivity.this, LoginActivity.class);
         startActivity(intent);
@@ -94,6 +100,11 @@ public class HomeActivity extends AppCompatActivity {
     }
     private void createDb(){
         db = openOrCreateDatabase("Parkflow", MODE_PRIVATE, null);
+    }
+    private void logout(){
+        Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
     private void submit() {
         String nameValue = name.getText().toString();
@@ -127,8 +138,6 @@ public class HomeActivity extends AppCompatActivity {
         db.execSQL(querry, new String[]{nameValue, docValue, phoneValue, emailValue, passValue, String.valueOf(userId)});
         db.close();
     }
-
-
     private void deleteUser () {
         try {
             String querry = "DELETE FROM User WHERE id = ?";

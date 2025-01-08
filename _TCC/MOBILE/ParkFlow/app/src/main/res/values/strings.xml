@@ -22,4 +22,5 @@
     <string name="vehicle_color_label">Color</string>
     <string name="return_label">Return</string>
     <string name="save_label">Save</string>
+    <string name="profile_logout_label">Logout</string>
 </resources>

@@ -45,14 +45,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-
-
-        //! area de teste
-        identification.setText("2");
-        password.setText("2");
-        login();
-        // fim da area de teste
-
     }
 
 
@@ -93,8 +85,6 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         errorTv.setText("Usuário ou senha inválidos");
-        db.close();
-        cursor.close();
     }
     protected void subscribe(){
         Intent intent = new Intent(LoginActivity.this, SubscribeActivity.class);
